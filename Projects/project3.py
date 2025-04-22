@@ -40,7 +40,7 @@ for i in range (385):
     t.left(1)
 
 t.penup()
-t.goto(-95,-185)
+t.goto(-102,-185)
 t.setheading(0)
 t.pendown()
 
@@ -63,7 +63,7 @@ for i in range (385):
     t.left(1)
 
 t.penup()
-t.goto(53.5,-185)
+t.goto(61.5,-185)
 t.setheading(10)
 t.pendown()
 
