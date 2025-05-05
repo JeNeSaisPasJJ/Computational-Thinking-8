@@ -10,7 +10,10 @@ for i in range(6):
     guess_word = input()
     output = ""
 
-    if guess_word 
+    if "oo" in guess_word and not in hidden_word
+        output += "⬛"
+    elif "oo" in guess_word and "o" in hidden_word
+        output += "🟩" "⬛"
 
     # First letter (in python, counting starts at 0 not 1)
     if guess_word[0] == hidden_word[0]:
