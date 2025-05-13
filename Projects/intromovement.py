@@ -24,7 +24,7 @@ set_background("castle")
 s1 = create_sprite("character1",0,-200)
 
 # Section 3: define movement controls
-def move_up():
+ move_up():
 	s1.setheading(90)
 	s1.forward(10)
    	 
@@ -65,7 +65,7 @@ def red_pen ():
 	s1.color("red")
 def green_pen():
 	s1.color("green")
-def reset(x,y):
+def reset(x,y):def
 	s1.goto(x,y)
 
 window.onkeypress(red_pen, "r")
