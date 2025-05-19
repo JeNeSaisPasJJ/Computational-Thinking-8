@@ -72,6 +72,7 @@ while True:
 		if get_distance(s1,s2) < 60:
 			lives -= 1
 			obstacles.remove(s2)
+			
 
 
 
