@@ -37,8 +37,7 @@ t4 = create_sprite("hoop",x4,y4)
 
 
 # # Section 4 - Racing
-# # TODO - set how much each variable changes by and increase the number of repeats to at least 30
-# # TODO - explain here which sprites are faster or slower
+# sprite 1 is faster usually, sprite 2 has a chance to be faster but is very inconsistent, sprite 3 is consistent and could win, sprite 4 is consistent in a small range but could lose.
 for i in range(30):
 	x1 +=random.randint(10,17)
 	x2 +=random.randint(0,21)

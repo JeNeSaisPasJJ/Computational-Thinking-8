@@ -27,7 +27,8 @@ window.tracer(0)
 # Section 2: Setup
 s1 = create_sprite("lebron2" ,0 ,0)
 set_background("basketballcourt")
-lives = 0
+lives = 3
+obstacles = []
 
 # Section 3: Controls
 def move_up():
@@ -50,7 +51,6 @@ window.onkeypress(move_up, "w")
 window.onkeypress(move_down, "s")
 window.onkeypress(move_left, "a")
 window.onkeypress(move_right, "d")
-# TODO - pick keys for each control
 
 # Section 4: Game Loop
 window.listen()
@@ -58,10 +58,20 @@ timer = 0
 while True:
 	time.sleep(0.1)
 	timer += 1  
-	 
-    
  	# TODO - code for automatic actions
 
+	if timer % 7 == 0:
+		y_position = random.randint(-250, 250)
+		s2 = create_sprite("basketball" ,350 ,random.randint(-250, 250))
+		s2.setheading(180)
+		obstacles.append(s2)
+
+
+	for s2 in obstacles:
+		s2.forward(10)
+		if get_distance(s1,s2) < 60:
+			lives -= 1
+			obstacles.remove(s2)
 
 
 
@@ -69,8 +79,8 @@ while True:
 
 	window.update()
 
-	# if :
-	# 	break
+	if lives <= 0:
+		break
 	
 
 print("Game Over")
