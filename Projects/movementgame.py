@@ -53,6 +53,7 @@ window.onkeypress(move_left, "a")
 window.onkeypress(move_right, "d")
 
 # Section 4: Game Loop
+time.sleep(5)
 window.listen()
 timer = 0
 while True:
@@ -72,7 +73,7 @@ while True:
 		if get_distance(s1,s2) < 60:
 			lives -= 1
 			obstacles.remove(s2)
-			
+
 
 
 
